@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "functions": {
-    "api/auth/users.js": { "runtime": "nodejs@20.x" },
-    "api/auth/sign-up.js": { "runtime": "nodejs@20.x" },
-    "api/auth/login.js": { "runtime": "nodejs@20.x" }
-  },
+  "builds": [
+    { "src": "api/auth/users.js", "use": "@vercel/node" },
+    { "src": "api/auth/sign-up.js", "use": "@vercel/node" },
+    { "src": "api/auth/login.js", "use": "@vercel/node" }
+  ],
   "routes": [
     { "src": "/api/auth/users", "dest": "/api/auth/users.js" },
     { "src": "/api/auth/sign-up", "dest": "/api/auth/sign-up.js" },

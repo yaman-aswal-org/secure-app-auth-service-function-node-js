@@ -1,13 +1,40 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/auth/users.js", "use": "@vercel/node" },
-    { "src": "api/auth/sign-up.js", "use": "@vercel/node" },
-    { "src": "api/auth/login.js", "use": "@vercel/node" }
+    {
+      "src": "api/auth/users.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 60
+      }
+    },
+    {
+      "src": "api/auth/sign-up.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 60
+      }
+    },
+    {
+      "src": "api/auth/login.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 60
+      }
+    }
   ],
   "routes": [
-    { "src": "/api/auth/users", "dest": "/api/auth/users.js" },
-    { "src": "/api/auth/sign-up", "dest": "/api/auth/sign-up.js" },
-    { "src": "/api/auth/login", "dest": "/api/auth/login.js" }
+    {
+      "src": "/api/auth/users",
+      "dest": "/api/auth/users.js"
+    },
+    {
+      "src": "/api/auth/sign-up",
+      "dest": "/api/auth/sign-up.js"
+    },
+    {
+      "src": "/api/auth/login",
+      "dest": "/api/auth/login.js"
+    }
   ]
 }

@@ -1,5 +1,5 @@
 import User from "../models/user";
-import { connectToDatabase } from "../utils/db";
+import { connectToDatabase } from "../databases/db";
 import { generateToken } from "jwt-token-manager";
 
 const secureKey = "secure-code-832ysoznehha22lksttqqq";

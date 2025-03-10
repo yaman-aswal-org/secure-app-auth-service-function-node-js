@@ -1,4 +1,4 @@
-import { connectToDatabase } from "../utils/db";
+import { connectToDatabase } from "../databases/db";
 import User from "../models/user";
 import { generateToken } from "jwt-token-manager";
 
